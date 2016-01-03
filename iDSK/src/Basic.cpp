@@ -91,22 +91,22 @@ void Basic( BYTE * BufFile, char * Listing, bool IsBasic, bool CrLf )
         };
     static const char * MotsClefs[ 0x80 ] =
         {
-        "AFTER", "AUTO", "BORDER", "CALL", "CAT", "CHAIN", "CLEAR", "CLG",
-        "CLOSEIN", "CLOSEOUT", "CLS", "CONT", "DATA", "DEF", "DEFINT",
-        "DEFREAL", "DEFSTR", "DEG", "DELETE", "DIM", "DRAW", "DRAWR", "EDIT",
-        "ELSE", "END", "ENT", "ENV", "ERASE", "ERROR", "EVERY", "FOR",
-        "GOSUB", "GOTO", "IF", "INK", "INPUT", "KEY", "LET", "LINE", "LIST",
-        "LOAD", "LOCATE", "MEMORY", "MERGE", "MID$", "MODE", "MOVE", "MOVER",
-        "NEXT", "NEW", "ON", "ON BREAK", "ON ERROR GOTO", "SQ", "OPENIN",
-        "OPENOUT", "ORIGIN", "OUT", "PAPER", "PEN", "PLOT", "PLOTR", "POKE",
-        "PRINT", "'", "RAD", "RANDOMIZE", "READ", "RELEASE", "REM", "RENUM",
-        "RESTORE", "RESUME", "RETURN", "RUN", "SAVE", "SOUND", "SPEED", "STOP",
-        "SYMBOL", "TAG", "TAGOFF", "TROFF", "TRON", "WAIT", "WEND", "WHILE",
-        "WIDTH", "WINDOW", "WRITE", "ZONE", "DI", "EI", "FILL", "GRAPHICS",
-        "MASK", "FRAME", "CURSOR", "#E2", "ERL", "FN", "SPC", "STEP", "SWAP",
-        "#E8", "#E9", "TAB", "THEN", "TO", "USING", ">", "=", ">=", "<", "<>",
-        "<=", "+", "-", "*", "/", "^", "\\ ", "AND", "MOD", "OR", "XOR", "NOT",
-        "#FF"
+        "AFTER ", "AUTO ", "BORDER ", "CALL ", "CAT ", "CHAIN ", "CLEAR ", "CLG ",
+        "CLOSEIN ", "CLOSEOUT ", "CLS ", "CONT ", "DATA ", "DEF ", "DEFINT ",
+        "DEFREAL ", "DEFSTR ", "DEG ", "DELETE ", "DIM ", "DRAW ", "DRAWR ", "EDIT ",
+        " ELSE ", "END ", "ENT ", "ENV ", "ERASE ", "ERROR ", "EVERY ", "FOR ",
+        "GOSUB ", "GOTO ", "IF ", "INK ", "INPUT ", "KEY ", "LET ", "LINE ", "LIST ",
+        "LOAD ", "LOCATE ", "MEMORY ", "MERGE ", "MID$ ", "MODE ", "MOVE ", "MOVER ",
+        "NEXT ", "NEW ", "ON ", "ON BREAK ", "ON ERROR GOTO ", "SQ ", "OPENIN ",
+        "OPENOUT ", "ORIGIN ", "OUT ", "PAPER ", "PEN ", "PLOT ", "PLOTR ", "POKE ",
+        "PRINT ", "' ", "RAD ", "RANDOMIZE ", "READ ", "RELEASE ", "REM ", "RENUM ",
+        "RESTORE ", "RESUME ", "RETURN ", "RUN ", "SAVE ", "SOUND ", "SPEED ", "STOP ",
+        "SYMBOL ", "TAG ", "TAGOFF ", "TROFF ", "TRON ", "WAIT ", "WEND ", "WHILE ",
+        "WIDTH ", "WINDOW ", "WRITE ", "ZONE ", "DI ", "EI ", "FILL ", "GRAPHICS ",
+        "MASK ", "FRAME ", "CURSOR ", "#E2 ", "ERL ", "FN ", "SPC ", " STEP ", "SWAP ",
+        "#E8 ", "#E9 ", "TAB ", " THEN ", " TO ", "USING ", ">", "=", ">=", "<", "<>",
+        "<=", "+", "-", "*", "/", "^", "\\  ", " AND ", " MOD ", " OR ", " XOR ", "NOT ",
+        "#FF "
         };
 
     static const char * Fcts[ 0x80 ] =
@@ -340,12 +340,12 @@ void Basic( BYTE * BufFile, char * Listing, bool IsBasic, bool CrLf )
                        , &Listing[ StartLigne + 80 ]
                        , EndLigne
                        );
-                memcpy( &Listing[ StartLigne + 80 ], "\r\n", 2 );
+                memcpy( &Listing[ StartLigne + 80 ], "\n", 2 );
                 StartLigne += 82;
                 EndLigne -= 80;
                 }
             }
-        strcat( Listing, "\r\n" );
+        strcat( Listing, "\n" );
         StartLigne = strlen( Listing );
         }
     // Conversion des caractères accentués si nécessaire
